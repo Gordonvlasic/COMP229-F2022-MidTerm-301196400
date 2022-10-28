@@ -1,5 +1,28 @@
 /* custom JS goes here */
 
+
+//Function to allow removal of a collection from the database.
+let RemoveCollection = null;
+
+function DeleteCollection(){
+    let RemoveCollection = prompt("Enter the name of the collection you would like to remove from the database.");
+    if (RemoveCollection != null){
+        let link = document.location.origin + '/products/delete/' + RemoveCollection;
+        window.location.href = link;
+    }
+}
+//app.js
+//Gordon Vlasic
+//301196400
+
+
+
+
+
+
+
+
+
 /* pagination code from http://www.bootply.com/lxa0FF9yhw */
 $.fn.pageMe = function(opts){
     var $this = this,
@@ -118,12 +141,3 @@ $.fn.pageMe = function(opts){
     );
 })();
 
-let RemoveCollection = null;
-
-function DeleteCollection(){
-    let RemoveCollection = prompt("Enter the name of the collection you would like to remove from the database.");
-    if (RemoveCollection != null){
-        let link = document.location.origin + '/products/delete/' + RemoveCollection;
-        window.location.href = link;
-    }
-}
